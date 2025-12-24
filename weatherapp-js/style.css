@@ -13,7 +13,7 @@ html, body {
         linear-gradient(
             rgba(255, 255, 255, 0.281),
             rgba(255, 255, 255, 0.267)
-        ), url('backgound.jpg');
+        ), url('bg1.jpg');
     background-position: center;
     background-size: cover;
 }
