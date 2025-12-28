@@ -4,15 +4,16 @@
     box-sizing: border-box;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 html, body {
     width: 100%;
     height: 100%;
     background-color: #87d2f0;
     background-image:
         linear-gradient(
-            rgba(255, 255, 255, 0.281),
-            rgba(255, 255, 255, 0.267)
-        ), url('bg1.jpg');
+            rgba(255, 255, 255, 0.270),
+            rgba(255, 255, 255, 0.265)
+        ), url('backgound.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -42,10 +43,11 @@ h2 {
     border-radius: 20px;
     background-color: #56595c73;
 }
+
 .weather-app input{
     width: 50%;
-    height: 30px;
-    border-radius: 5px;
+    height: 31px;
+    border-radius: 6px;
     box-shadow: 0px 1px 3px 5px rgba(255, 255, 255, 0.25);
     border-style: none;
     padding: 20px;
@@ -64,18 +66,19 @@ textarea::placeholder {
     border: 1px solid rgb(252, 252, 252);
 }
 .weather-app button{
-    width: 24%;
+    width: 20%;
     height: 40px;
     margin: 10px;
     border-radius: 5px;
     border: 1px solid gray;
-    background-color: #535553;
+    background-color: #5c5f5c;
     color: white;
     font-size: 15px;
     display: block;
     cursor: pointer;
-    background-color: #2e2d2d;
+    background-color: #5c5a5a;
 }
+
 .weather-app button:hover{
     background-color: #413f3f;
     transition: 0.3s;
