@@ -18,39 +18,41 @@ html, body {
     background-size: cover;
 }
 .container {
-    width: 100%;
-    height: 100vh;
+    width: 90%;
+    height: 90vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 h2 {
     text-align: center;
-    padding: 20px;
-    font-size: 35px;
+    padding: 15px;
+    font-size: 45px;
     color: white;
-    text-shadow: 5px 5px 20px #000000;
+    text-shadow: 5px 5px 15px #000000;
 }
 .weather-app {
-    width: clamp(300px, 90vw, 900px);
-    height: clamp(300px, 90vh, 500px);
-    margin: auto;
-    padding: 10px;
+    width: clamp(300px, 95vw, 900px); /* Increased 90vw to 95vw for better mobile use */
+    min-height: 600px;               /* Use min-height instead of height */
+    height: auto;                    /* Allows the box to grow if content stacks */
+    margin: 20px auto;
+    padding: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
     box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
     border-radius: 20px;
     background-color: #56595c73;
+    backdrop-filter: blur(10px);    /* Adds that nice glass effect */
 }
 
 .weather-app input{
-    width: 50%;
+    width: 60%;
     height: 31px;
     border-radius: 6px;
     box-shadow: 0px 1px 3px 5px rgba(255, 255, 255, 0.25);
     border-style: none;
-    padding: 20px;
+    padding: 25px;
     font-size: 16px;
     margin: 10px;
     background-color: inherit;
@@ -66,20 +68,65 @@ textarea::placeholder {
     border: 1px solid rgb(252, 252, 252);
 }
 .weather-app button{
-    width: 20%;
-    height: 40px;
+    width: 35%;
+    height: 50px;
     margin: 10px;
     border-radius: 5px;
     border: 1px solid gray;
-    background-color: #5c5f5c;
+    background-color: #333533;
     color: white;
     font-size: 15px;
     display: block;
     cursor: pointer;
-    background-color: #5c5a5a;
+    background-color: #4d4b4b;
+    transition: 0.5s;
+    padding: 10px;
 }
 
 .weather-app button:hover{
-    background-color: #413f3f;
+    background-color: #222121;
     transition: 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+    .weather-app {
+        width: 95%;         /* Ensure it stays within screen bounds */
+        padding: 15px;
+        height: 85vh;
+    }
+
+    .weather-app input {
+        width: 100%;         /* Inputs should be wider on mobile */
+    }
+
+    .weather-app button {
+        width: 90%;         /* Buttons should be wider on mobile for easy tapping */
+    }
+    
+    h2 {
+        font-size: 28px;    /* Shrink title slightly so it doesn't wrap weirdly */
+    }
+}
+
+.city {
+    font-size: 80px;
+    font-weight: 500;
+}
+.temp {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
 }
