@@ -70,12 +70,14 @@ textarea::placeholder {
 .weather-app button{
     width: 35%;
     height: 50px;
+    width: 25%;
+    height: 40px;
     margin: 10px;
     border-radius: 5px;
     border: 1px solid gray;
     background-color: #333533;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     display: block;
     cursor: pointer;
     background-color: #4d4b4b;
